@@ -1,24 +1,43 @@
-# README
+# Overview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample API for file uploads for the purpose of testing NUS Fintech Society's Insurtech frontend, before the actual API is completed.
 
-Things you may want to cover:
+It is deployed on heroku: https://sample-image-upload-api.herokuapp.com/uploads
 
-* Ruby version
+# Usage
 
-* System dependencies
+This API supports only GET and POST methods.
 
-* Configuration
+## GET /uploads
 
-* Database creation
+A `GET` request to https://sample-image-upload-api.herokuapp.com/uploads should return:
 
-* Database initialization
+```JSON
+{
+  "message": "Hello!"
+}
+```
 
-* How to run the test suite
+## POST /uploads
 
-* Services (job queues, cache servers, search engines, etc.)
+You can do a `POST` request to the API endpoint. When sending a file over, the API endpoint should return the file size.
 
-* Deployment instructions
+Params for POST requests:
+| Field | Type | Description |
+| ------ | ---- | ----------- |
+| **img** | File | The desired file to upload. |
 
-* ...
+The POST request should return:
+| Field | Type | Description |
+| ------ | ---- | ----------- |
+| **message** | String | A string of random text. |
+| **file_size** | Integer | The size of the file, in bytes. |
+
+e.g.
+
+```JSON
+{
+  "message": "You have made a POST request!",
+  "file_size": 12234
+}
+```
