@@ -5,6 +5,6 @@ class UploadsController < ApplicationController
   end
 
   def create
-    render json: {'message': 'Hello!', 'image_size': params[:img].size}
+    render json: {'message': 'Hello!', 'file_size': params[:img].size}
   end
 end
