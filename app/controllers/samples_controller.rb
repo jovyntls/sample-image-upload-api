@@ -11,7 +11,7 @@ class SamplesController < ApplicationController
       status_code = 404
     elsif status_code == 200 then
       payload = {
-        error: "Request completed successfully!",
+        message: "Request completed successfully!",
         status: status_code
       }
     else 
