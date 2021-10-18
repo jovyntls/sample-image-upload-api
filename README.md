@@ -32,12 +32,14 @@ The POST request should return:
 | ------ | ---- | ----------- |
 | **message** | String | A string of random text. |
 | **file_size** | Integer | The size of the file, in bytes. |
+| **img** | String | An image of a car with scratches, in Base64. |
 
 e.g.
 
 ```JSON
 {
   "message": "You have made a POST request!",
-  "file_size": 12234
+  "file_size": 12234,
+  "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/4QCJRXhpZgAASUkqAAgAAA ... "
 }
 ```
