@@ -1,4 +1,15 @@
 class SamplesController < ApplicationController
+  def index
+    payload = [
+      { name: "Student 1", department: "SD", attended: true },
+      { name: "Student 2", department: "SD", attended: true },
+      { name: "Student 3", department: "SD", attended: true },
+      { name: "Student 4", department: "ML", attended: true },
+      { name: "Student 5", department: "ML", attended: true },
+      { name: "Student 6", department: "SD", attended: false }
+    ]
+    render :json => payload, :status => 200
+  end
 
   # GET /:id
   def show
